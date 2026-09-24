@@ -26,34 +26,6 @@ flat list.
 your RimWorld `Mods` folder. Requires the [Harmony](https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077)
 mod as a dependency (RimWorld will prompt for it automatically via Workshop).
 
-## Building from source
-
-See `BUILDING.md` for full setup, build, and troubleshooting notes (including known
-rough edges hit during development). Quick version:
-
-1. Get a copy of `0Harmony.dll` and place it at `Lib/0Harmony.dll` (used for compiling
-   only — not redistributed; the Harmony mod supplies its own copy at runtime).
-2. Open `ModGroups.csproj` and point `<RimWorldManagedPath>` at your own RimWorld
-   install's `Managed` folder, e.g.
-   `C:\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed`.
-3. `dotnet build`. The compiled `ModGroups.dll` is written straight to `1.6/Assemblies/`.
-4. Symlink or copy the project folder into your RimWorld `Mods` folder to test in-game.
-
-## Project structure
-
-ModGroups/
-About/About.xml Mod metadata RimWorld reads
-ModGroups.csproj Build this
-1.6/Assemblies/ Compiled ModGroups.dll goes here (gitignored)
-Lib/ Local build-only Harmony reference (gitignored)
-Source/
-ModGroupsMod.cs Mod entry point, Harmony setup
-ModGroupsSettings.cs Persisted settings (ModSettings/Scribe)
-ModGroup.cs A single group: name, member mods, collapsed state
-Patch_PageModsConfig.cs Harmony patch adding the "Mod Groups" button
-Dialog_ModGroups.cs The groups window itself
-
-
 ## Known limitations / roadmap
 
 - No drag-and-drop yet — moving mods between groups goes through a dropdown menu
