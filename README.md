@@ -20,7 +20,7 @@ flat list.
 
 ## Installation
 
-**Steam Workshop:** *(add your Workshop link here once published)*
+**Steam Workshop:** (https://steamcommunity.com/sharedfiles/filedetails/?id=3807229159)
 
 **Manual:** download the latest release, or clone this repo, and drop the folder into
 your RimWorld `Mods` folder. Requires the [Harmony](https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077)
